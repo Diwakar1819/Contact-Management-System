@@ -14,7 +14,6 @@
 int main(void)
 {
     int choice;
-    char saveChoice;
     AddressBook addressBook;
 
     /* Initialize Address Book */
@@ -24,7 +23,7 @@ int main(void)
     printf("\n==================================================\n");
     printf("           WELCOME TO ADDRESS BOOK\n");
     printf("==================================================\n");
-    printf(" Manage your contacts quickly and efficiently.\n");
+    printf(" Manage your contacts quickly and efficiently.\nLoading Address Book...\n");
     printf("==================================================\n");
 
     /* Main Application Loop */
@@ -36,8 +35,7 @@ int main(void)
         printf("3. Edit Contact\n");
         printf("4. Delete Contact\n");
         printf("5. List All Contacts\n");
-        printf("6. Save Contacts\n");
-        printf("7. Exit\n");
+        printf("6. Exit\n");
         printf("===============================================\n");
         printf("Enter your choice : ");
 
@@ -71,19 +69,11 @@ int main(void)
                 break;
 
             case 6:
-                saveContactsToFile(&addressBook);
-                printf("\nContacts saved successfully.\n");
-                break;
-
-            case 7:
-                printf("\nDo you want to save before exiting? (Y/N) : ");
-                scanf(" %c", &saveChoice);
-
-                if (saveChoice == 'Y' || saveChoice == 'y')
-                {
-                    saveContactsToFile(&addressBook);
-                    printf("\nContacts saved successfully.\n");
-                }
+                printf("\nSaving contacts to file...\n");
+                if(saveContactsToFile(&addressBook))
+                    printf("Contacts saved successfully.\n");
+                else
+                    printf("ERROR: Unable to save contacts.\n\n");
 
                 printf("\nThank you for using Address Book.\n");
                 printf("Have a great day!\n");
@@ -92,10 +82,10 @@ int main(void)
 
             default:
                 printf("\nERROR: Invalid menu choice.\n");
-                printf("Please enter a number between 1 and 7.\n");
+                printf("Please enter a number between 1 and 6.\n");
         }
 
-    } while (choice != 7);
+    } while (choice != 6);
 
     return 0;
 }
