@@ -45,6 +45,9 @@ int main(void)
             while (getchar() != '\n'); /* Clear input buffer */
             choice = 0; /* Force default case in the switch */
         }
+        else{
+            while (getchar() != '\n');   /* Clear invalid input */
+        }
 
         switch (choice)
         {
