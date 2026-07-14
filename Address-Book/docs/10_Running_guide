@@ -7,12 +7,12 @@
 To compile the application, navigate to the project root directory (`Address-Book`) and run:
 
 ```bash
-gcc -Wall -Wextra -Iinclude src/main.c src/contact.c src/file.c -o addressbook
+gcc -Wall -Wextra -Iinclude src/main.c src/contact.c src/contact_helper.c src/file.c -o addressbook
 ```
 
 *Note: If compiling from inside the `src/` directory, use:*
 ```bash
-gcc -Wall -Wextra -I../include main.c contact.c file.c -o addressbook
+gcc -Wall -Wextra -I../include main.c contact.c contact_helper.c file.c -o addressbook
 ```
 
 ---
