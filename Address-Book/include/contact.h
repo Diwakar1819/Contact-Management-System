@@ -10,6 +10,12 @@
  *                  PROJECT STATUS CODES
  *===================================================================*/
 
+/* General Status */
+#define SUCCESS    1
+#define FAILURE    0
+
+/* Name Validation Status */
+
 /* Success Status */
 #define VALID                           1
 
