@@ -13,4 +13,4 @@ src/*.o
 .DS_Store
 
 # Local runtime data (to prevent committing personal contacts)
-data/contacts.csv
+Address-Book/data/contacts.csv
