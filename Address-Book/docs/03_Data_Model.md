@@ -4,13 +4,13 @@
 
 ## Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Address Book Management System |
-| Document | Data Model |
-| Version | 1.0 |
-| Sprint | Sprint 0 |
-| Status | Final |
+| Field              | Value                          |
+|--------------------|--------------------------------|
+| Project            | Address Book Management System |
+| Document           | Data Model                     |
+| Version            | 1.0                            |
+| Sprint             | Sprint 0                       |
+| Status             | Final                          |
 
 ---
 
@@ -78,11 +78,11 @@ Responsibilities
 
 Attributes
 
-| Field | Description |
-|--------|-------------|
-| name | Contact Name |
-| phone | Mobile Number |
-| email | Email Address |
+| Field      | Description    |
+|------------|----------------|
+| name       | Contact Name   |
+| phone      | Mobile Number  |
+| email      | Email Address  |
 
 ---
 
