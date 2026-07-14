@@ -396,7 +396,7 @@ int search_by_name(AddressBook *addressBook)
     /* Search for matching contacts */
     for (i = 0; i < addressBook->contactCount; i++)
     {
-        if (strcmp(name, addressBook->contacts[i].name) == 0)
+        if (strcasecmp(name, addressBook->contacts[i].name) == 0)
         {
             matchedIndex[matchCount] = i;
             matchCount++;
