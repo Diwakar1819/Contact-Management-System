@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 #include "contact_helper.h"
 
 /*--------------------------------------------------------------------
@@ -396,7 +397,23 @@ int search_by_name(AddressBook *addressBook)
     /* Search for matching contacts */
     for (i = 0; i < addressBook->contactCount; i++)
     {
-        if (strcasecmp(name, addressBook->contacts[i].name) == 0)
+        char searchName[NAME_LENGTH];
+        char storedName[NAME_LENGTH];
+
+        strcpy(searchName, name);
+        strcpy(storedName, addressBook->contacts[i].name);
+
+        for (int j = 0; searchName[j] != '\0'; j++)
+        {
+            searchName[j] = tolower((unsigned char)searchName[j]);
+        }
+
+        for (int j = 0; storedName[j] != '\0'; j++)
+        {
+            storedName[j] = tolower((unsigned char)storedName[j]);
+        }
+
+        if (strcmp(searchName, storedName) == 0)
         {
             matchedIndex[matchCount] = i;
             matchCount++;
