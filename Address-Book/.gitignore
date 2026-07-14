@@ -1,0 +1,16 @@
+# Compiled binaries
+addressbook
+address_book
+
+# Object files
+*.o
+src/*.o
+
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Local runtime data (to prevent committing personal contacts)
+data/contacts.csv
