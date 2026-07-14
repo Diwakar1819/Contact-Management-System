@@ -7,7 +7,7 @@
  *                  FILE CONFIGURATION
  *===================================================================*/
 
-#define FILE_NAME "contacts.csv"
+#define FILE_NAME "data/contacts.csv"
 
 /*====================================================================
  *                  FILE FUNCTION PROTOTYPES

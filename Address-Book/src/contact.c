@@ -2,7 +2,7 @@
 #include <string.h>
 #include "contact.h"
 #include "file.h"
-#include "populate.h"
+
 
 /*====================================================================
  *                  PRIVATE FUNCTION PROTOTYPES
@@ -52,7 +52,14 @@ void initialize(AddressBook *addressBook)
     addressBook->contactCount = 0;
 
     /* Load contacts from file */
-    loadContactsFromFile(addressBook);
+    if (loadContactsFromFile(addressBook) == SUCCESS)
+    {
+        printf("Contacts loaded successfully. (%d contacts)\n", addressBook->contactCount);
+    }
+    else
+    {
+        printf("No existing contacts found. Starting fresh.\n");
+    }
 }
 
 /*--------------------------------------------------------------------
@@ -940,6 +947,7 @@ void editContact(AddressBook *addressBook)
                         break;
                 }
             }
+            break;
 
         /*---------------- Edit Phone ----------------*/
         case 2:
@@ -978,6 +986,7 @@ void editContact(AddressBook *addressBook)
                         break;
                 }
             }
+            break;
 
         /*---------------- Edit Email ----------------*/
         case 3:
@@ -1012,6 +1021,7 @@ void editContact(AddressBook *addressBook)
                         break;
                 }
             }
+            break;
 
         /*---------------- Cancel ----------------*/
         case 4:
