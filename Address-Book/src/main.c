@@ -21,10 +21,10 @@ int main(void)
 
     /* Welcome Screen */
     printf("\n==================================================\n");
-    printf("           WELCOME TO ADDRESS BOOK\n");
+    printf("             WELCOME TO ADDRESS BOOK\n");
     printf("==================================================\n");
-    printf(" Manage your contacts quickly and efficiently.\nLoading Address Book...\n");
-    printf("==================================================\n");
+    printf(" Manage your contacts quickly and efficiently.\n Loading Address Book...\n");
+    printf("==================================================\n\n");
 
     /* Main Application Loop */
     do
